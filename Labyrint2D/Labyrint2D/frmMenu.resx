@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEAAAAEAGAAoMgAAFgAAACgAAABAAAAAgAAAAAEAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AADoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDpqBDy
+        y3D00YD00YD00YD00YDyy3DqqxjoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDpqBDyy3D00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD0
+        0YD00YD00YD99uf////////////////////////+/PfwwljoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDpqBDyy3D00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD0
+        0YDoogDoogDoogDoogDoogDoogDoogDttjj99uf/////////////////////////////////////////
+        ///////////////////////////////////////////////////////////+/PfqqxjoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDttjj99uf/////////////////////////////////////////////////
+        ///////////////////oogDoogDoogDoogDoogDoogDrriD99uf///////////////8yKu4kHO0kHO0k
+        HO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO0x
+        J+XoogDoogDoogDoogDoogDoogDoogDoogDppQj889//////////////////////////////////////
+        ///////////////////////////////////oogDoogDoogDoogDoogDppQj77c//////////////////
+        //8kHO3/////////////////////////////////////////////////////////////////////////
+        //////////////8kHO3qqxjoogDoogDoogDoogDoogDoogDoogDuvEj/////////////////////////
+        ///////////////////////////////////////////////////oogDoogDoogDoogDoogDstDD/////
+        //////////////////8kHO3/////////////////////////////////////////////////////////
+        //////////////////////////8yKu5NR/HxxWDoogDoogDoogDoogDoogDoogDoogDzznj/////////
+        //////////////////////////////////////////////////////8yKu4kHO0kHO3oogDoogDoogDo
+        ogDoogDuuUD///////////////////////9NR/EyKu7/////////////////////////////////////
+        //////////////////////////////////////8yKu5NR/H////00YDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////////////////////////////////9bVfIkHO0kHO0kHO0kHO1NR/H/////
+        ///oogDoogDoogDoogDoogDrriD+/Pf///////////////////////8kHO3/////////////////////
+        //////////////////////////////////////////////////////8kHO3////////00YDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////////////////////////////8yKu4kHO0kHO0kHO1bVfL/
+        ///////////////////oogDoogDoogDoogDoogDoogD22Zf///////////////////////8kHO3/////
+        //////////////////////////////////////////////////////////////////////8kHO3/////
+        ///00YDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////////////////8yKu5NR/H/
+        ///////////////////////////////////oogDoogDoogDoogDoogDoogDyy3D/////////////////
+        //////8kHO3////56L/00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD00YD56L//////////
+        //////8kHO3////////00YDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8yKu4k
+        HO0kHO1LPtn00YD00YD00YD00YD00YD00YD00YD00YD00YD00YDoogDoogDoogDoogDoogDoogDttjj/
+        //////////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////8kHO3////////00YDoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogD56L////////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////8yKu5NR/H////////00YDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8kHO3////00YDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////8kHO3////////////00YDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8kHO3////0
+        0YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////8kHO3/////////
+        ///00YDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8kHO3////00YDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////////////
+        //////8kHO3////004foogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //8kHO3////////////00YDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8kHO3/
+        ///00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD0
+        0YD///////////////////8kHO3////+/PfqqxjoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////8yKu5NR/H////////////00YDoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogD00YD///////////////////8kHO3////////xxWDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDppQj889////////8kHO3////////////////00YDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDyy3D///////////////////8kHO3////////00YDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDuvEj///////////8kHO3////////////////00YDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDttjj///////////////////9NR/EyKu7/
+        ///00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDzznj///////8yKu5NR/H/////////////
+        ///00YDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8kHO3////00YDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD56L//////////
+        //////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////8kHO3/
+        ///////////////////vv1DoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8kHO3/
+        ///004foogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD0
+        0YD///////8kHO3////////////////78NfppQjoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //////////8kHO3////+/PfqqxjoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogD00YD///8yKu5NR/H////////////////00YDoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////////8kHO3////////xxWDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8kHO3////00YDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDttjj99uf///8kHO3////////////////////00YDoogDoogDoogDo
+        ogDoogDoogDoogDoogDyy3D///////////////////8kHO3////////00YDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////9NR/Ey
+        Ku700YDoogDoogDoogDoogDoogDoogDoogDoogDppQj889////////8kHO3////////////////////0
+        0YDoogDoogDoogDoogDoogDoogDoogDoogDttjj///////////////////8kHO3////////00YDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //////////////8kHO300YDoogDoogDoogDoogDoogDoogDoogDoogDuvEj///////////8kHO3/////
+        ///////////////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogD56L////////////////9NR/Ey
+        Ku7////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////////////8kHO300YDoogDoogDoogDoogDoogDoogDoogDoogDzznj/////
+        //////8kHO3////////////////////vv1DoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////
+        //////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////////////////8kHO300YDoogDoogDoogDoogDoogDoogDo
+        ogDoogD00YD///////////8kHO3////////////////78NfppQjoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogD00YD///////////////////8kHO3////004foogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////////8kHO300YDoogDoogDo
+        ogDoogDoogDoogDoogDoogD00YD///////////8kHO3////////////78NfssSjoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogD00YD///////////////////9NR/EyKu7+/PfrriDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////8yKu5N
+        R/H00YDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////8kHO3////////////00YDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDyy3D///////////////////////8kHO3////yy3Do
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////8kHO3/////
+        ///////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDstDD/////////////////////
+        //9NR/EyKu700YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////////8kHO3////00YDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////
+        //////8kHO3////////////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD55bf/
+        //////////////////////8kHO3004foogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////////8yKu5NR/H////00YDoogDoogDoogDoogDoogDoogDo
+        ogDoogD00YD///////////8kHO3////////////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogD00YD///////////////////////9NR/EyKu3qqxjoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////8kHO3////////00YDoogDoogDo
+        ogDoogDoogDoogDoogDoogD00YD///////////8kHO3////////////00YDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogD00YD///////////////////////////8kHO3xxWDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////8kHO3/////
+        ///00YDoogDoogDoogDoogDoogDoogDoogDppQj889////////////8kHO3////////////00YDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDyy3D///////////////////////////8kHO30
+        0YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //////8kHO3////////00YDoogDoogDoogDoogDoogDoogDoogDuvEj///////////////8kHO3/////
+        ///////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDttjj/////////////////
+        //////////8kHO300YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////8kHO3////////00YDoogDoogDoogDoogDoogDoogDoogDzznj/////////
+        //////8kHO3////////////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD5
+        6L////////////////////////8kHO300YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDppQj889////////////////8kHO3////////00YDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////8kHO3////////////vv1DoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogD00YD///////////////////////8kHO300YDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDuvEj///////////////////8kHO3////////00YDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////////8kHO3////////78NfppQjoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////////8kHO300YDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDzznj///////////////8yKu5NR/H/////
+        ///00YDoogDoogDoogDoogDoogDoogDoogD00YD///////////////8kHO3////////00YDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////////////8kHO30
+        0YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////////////
+        //8kHO3////////////vv1DoogDoogDoogDoogDoogDoogDoogD00YD///////////////8kHO3/////
+        ///00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////////////
+        //////////8kHO300YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD0
+        0YD///////////////8kHO3////////78NfppQjoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //////8kHO3////////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD0
+        0YD///////////////////////8kHO300YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogD00YD///////////////8kHO3////////00YDoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD///////////////8kHO3////////00YDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogD00YD///////////////////8yKu5NR/H00YDoogDoogDoogDoogDoogDoogDoogDo
+        ogDyy3D00YD00YD00YD00YD00YD00YD56L////////////////93cvT////////00YDoogDoogDoogDo
+        ogDoogDoogDoogDoogD00YD///////////////8kHO3////////00YDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDppQj889////////////////////8kHO3////00YDoogDoogDoogDo
+        ogDoogDoogDoogDoogD////////////////////////////////////////////////////////////0
+        0YDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////8kHO3////////00YDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDpqBDyy3D00YD23J////////////////////8yKu5NR/H////0
+        0YDoogDoogDoogDoogDoogDoogDoogDoogD////////////////W1PsyKu4kHO0kHO0kHO0kHO1bVfL/
+        ///////////////00YDoogDoogDoogDoogDoogDoogDoogDoogD00YD///////////////8kHO3/////
+        ///+/PfwwljoogDoogDoogDoogDoogDoogDoogDpqBDyy3D99uf/////////////////////////////
+        //8kHO3////////00YDoogDoogDoogDoogDoogDoogDoogDoogBbVfIkHO0kHO0kHO1NR/Hx8f7/////
+        ///////////////////////////////00YDoogDoogDoogDoogDoogDoogDoogDoogD00YD/////////
+        //////9NR/EkHO0yKu7W1Pv+/Pf11o/00YD00YD00YD00YD00YD00YD99uf/////////////////////
+        //////////8yKu4kHO1NR/H////////vv1DoogDoogDoogDoogDoogDoogDoogDoogD/////////////
+        ///////////////////////////////////////////////vv1DoogDoogDoogDoogDoogDoogDoogDo
+        ogD00YD////////////////////////x8f4yKu7/////////////////////////////////////////
+        //////////////////////8yKu5NR/H////////////78NfppQjoogDoogDoogDoogDoogDoogDoogDo
+        ogD////////////////////////////////////////////////////////78NfppQjoogDoogDoogDo
+        ogDoogDoogDoogDoogDyy3D///////////////////////////9NR/EkHO0yKu7/////////////////
+        //////////////////////////////8yKu4kHO1NR/H////////////78NfssSjoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogD////////////////////////////////////////////////////78NfssSjo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDttjj///////////////////////////////////9NR/Ek
+        HO0yKu7///////////////////////////////8yKu4kHO1NR/H////////////////////wwljoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogD/////////////////////////////////////////////
+        ///668fssSjoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogD56L//////////////////////
+        //////////////////9NR/EkHO0kHO0kHO0kHO0kHO0kHO0kHO0kHO1NR/H/////////////////////
+        ///78NfppQjoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDstDDxxWD00YD00YD00YD00YD00YD0
+        0YD00YD00YDxxWDstDDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDpqBD55bf/
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////668fssSjoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDstDD668f/////////////////////////////////////////////////////////
+        ///////////////668f00YDxxWDstDDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDpqBD55bf/////////////////////////////////////
+        ///////////////////////668fttjjoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDstDDxxWD00YD00YD00YD0
+        0YD00YD00YD00YD00YD00YD00YD00YDxxWDstDDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDo
+        ogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogDoogAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
+</root>
