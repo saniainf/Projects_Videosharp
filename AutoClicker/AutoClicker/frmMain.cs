@@ -64,7 +64,7 @@ namespace AutoClicker
         {
             clicks--;
             prbCount.Value = clicks;
-            //DoMouseClick();
+            DoMouseClick();
             if (clicks == 0)
                 stopClicker();
         }
