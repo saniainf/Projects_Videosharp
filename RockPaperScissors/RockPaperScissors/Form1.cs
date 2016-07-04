@@ -103,38 +103,33 @@ namespace RockPaperScissors
         private void checkResult()
         {
             gameMode = Mode.Show;
-            int wins = 0;
-            int lose = 0;
-            int draw = 0;
+            bool wins = false;
+
             if (userFigure == compFigure)
-                draw = 1;
+            {
+                scoreDraw++;
+                lblMsgUser.Text = "Ничья";
+            }
             else
             {
-                if (userFigure == Figure.Rock)
-                    if (compFigure == Figure.Paper)
-                        lose = 1;
-                    else
-                        wins = 1;
-                if (userFigure == Figure.Scissors)
-                    if (compFigure == Figure.Rock)
-                        lose = 1;
-                    else
-                        wins = 1;
-                if (userFigure == Figure.Paper)
-                    if (compFigure == Figure.Scissors)
-                        lose = 1;
-                    else
-                        wins = 1;
+                if (userFigure == Figure.Rock && compFigure == Figure.Scissors)
+                    wins = true;
+                if (userFigure == Figure.Scissors && compFigure == Figure.Paper)
+                    wins = true;
+                if (userFigure == Figure.Paper && compFigure == Figure.Rock)
+                    wins = true;
+
+                if (wins)
+                {
+                    scoreWins++;
+                    lblMsgUser.Text = "Победа!";
+                }
+                else
+                {
+                    scoreLose++;
+                    lblMsgUser.Text = "Проигрыш";
+                }
             }
-            scoreWins += wins;
-            scoreLose += lose;
-            scoreDraw += draw;
-            if (wins > 0)
-                lblMsgUser.Text = "Победа!";
-            if (lose > 0)
-                lblMsgUser.Text = "Проигрыш";
-            if (draw > 0)
-                lblMsgUser.Text = "Ничья";
             showScore();
         }
 
