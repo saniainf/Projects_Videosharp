@@ -18,7 +18,7 @@ namespace MindCounter
         int minValue = 1;
         int maxValue = 10;
         int countQuestionMax = 2;
-        int timePerQuestion = 5;
+        int timePerQuestion = 10;
         int currentTime = 0;
         string currentAnswer;
         GameMode currentMode;
@@ -176,6 +176,15 @@ namespace MindCounter
             done();
         }
 
+        private void timeOver()
+        {
+            Font fnt = new System.Drawing.Font(lblThink.Font.FontFamily, 20, FontStyle.Bold);
+            lblThink.Font = fnt;
+            lblThink.TextAlign = ContentAlignment.MiddleCenter;
+            lblThink.Text = "Время вышло\nВыбери задание и сложность";
+            done();
+        }
+
         private void done()
         {
             txbAnswer.Enabled = false;
@@ -220,7 +229,7 @@ namespace MindCounter
             else
             {
                 tmrAnswer.Enabled = false;
-                gameOver();
+                timeOver();
             }
         }
     }

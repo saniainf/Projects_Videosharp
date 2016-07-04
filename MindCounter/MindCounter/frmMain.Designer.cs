@@ -49,7 +49,7 @@
             this.lblThink.BackColor = System.Drawing.Color.White;
             this.lblThink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblThink.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblThink.Location = new System.Drawing.Point(12, 9);
+            this.lblThink.Location = new System.Drawing.Point(12, 12);
             this.lblThink.Name = "lblThink";
             this.lblThink.Size = new System.Drawing.Size(393, 86);
             this.lblThink.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             this.txbAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbAnswer.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txbAnswer.Location = new System.Drawing.Point(486, 9);
+            this.txbAnswer.Location = new System.Drawing.Point(486, 12);
             this.txbAnswer.MaxLength = 6;
             this.txbAnswer.Name = "txbAnswer";
             this.txbAnswer.Size = new System.Drawing.Size(196, 86);
@@ -70,7 +70,7 @@
             // btnPlus
             // 
             this.btnPlus.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPlus.Location = new System.Drawing.Point(11, 100);
+            this.btnPlus.Location = new System.Drawing.Point(11, 103);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(92, 39);
             this.btnPlus.TabIndex = 1;
@@ -81,7 +81,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(426, 9);
+            this.label1.Location = new System.Drawing.Point(426, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 86);
             this.label1.TabIndex = 0;
@@ -90,7 +90,7 @@
             // 
             // prbProgress
             // 
-            this.prbProgress.Location = new System.Drawing.Point(12, 101);
+            this.prbProgress.Location = new System.Drawing.Point(12, 104);
             this.prbProgress.Name = "prbProgress";
             this.prbProgress.Size = new System.Drawing.Size(393, 37);
             this.prbProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -101,7 +101,7 @@
             // 
             this.btnAnswer.Enabled = false;
             this.btnAnswer.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAnswer.Location = new System.Drawing.Point(485, 100);
+            this.btnAnswer.Location = new System.Drawing.Point(485, 103);
             this.btnAnswer.Name = "btnAnswer";
             this.btnAnswer.Size = new System.Drawing.Size(198, 39);
             this.btnAnswer.TabIndex = 1;
@@ -112,7 +112,7 @@
             // btnMinus
             // 
             this.btnMinus.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnMinus.Location = new System.Drawing.Point(112, 100);
+            this.btnMinus.Location = new System.Drawing.Point(112, 103);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(92, 39);
             this.btnMinus.TabIndex = 1;
@@ -123,7 +123,7 @@
             // btnMult
             // 
             this.btnMult.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnMult.Location = new System.Drawing.Point(213, 100);
+            this.btnMult.Location = new System.Drawing.Point(213, 103);
             this.btnMult.Name = "btnMult";
             this.btnMult.Size = new System.Drawing.Size(92, 39);
             this.btnMult.TabIndex = 1;
@@ -134,7 +134,7 @@
             // btnDivs
             // 
             this.btnDivs.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDivs.Location = new System.Drawing.Point(314, 100);
+            this.btnDivs.Location = new System.Drawing.Point(314, 103);
             this.btnDivs.Name = "btnDivs";
             this.btnDivs.Size = new System.Drawing.Size(92, 39);
             this.btnDivs.TabIndex = 1;
@@ -146,7 +146,7 @@
             // 
             this.txbMax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbMax.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txbMax.Location = new System.Drawing.Point(412, 101);
+            this.txbMax.Location = new System.Drawing.Point(412, 104);
             this.txbMax.MaxLength = 5;
             this.txbMax.Name = "txbMax";
             this.txbMax.Size = new System.Drawing.Size(67, 37);
@@ -155,13 +155,12 @@
             // 
             // prbAnswerTime
             // 
-            this.prbAnswerTime.Location = new System.Drawing.Point(412, 77);
+            this.prbAnswerTime.Location = new System.Drawing.Point(412, 80);
             this.prbAnswerTime.Maximum = 5;
             this.prbAnswerTime.Name = "prbAnswerTime";
             this.prbAnswerTime.Size = new System.Drawing.Size(67, 18);
             this.prbAnswerTime.Step = 1;
             this.prbAnswerTime.TabIndex = 5;
-            this.prbAnswerTime.Value = 1;
             this.prbAnswerTime.Visible = false;
             // 
             // tmrAnswer
@@ -173,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 151);
+            this.ClientSize = new System.Drawing.Size(694, 153);
             this.Controls.Add(this.prbAnswerTime);
             this.Controls.Add(this.txbMax);
             this.Controls.Add(this.btnAnswer);
