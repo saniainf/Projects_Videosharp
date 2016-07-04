@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.lblThink = new System.Windows.Forms.Label();
             this.txbAnswer = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.btnMult = new System.Windows.Forms.Button();
             this.btnDivs = new System.Windows.Forms.Button();
             this.txbMax = new System.Windows.Forms.TextBox();
+            this.prbAnswerTime = new System.Windows.Forms.ProgressBar();
+            this.tmrAnswer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblThink
@@ -87,9 +90,9 @@
             // 
             // prbProgress
             // 
-            this.prbProgress.Location = new System.Drawing.Point(12, 100);
+            this.prbProgress.Location = new System.Drawing.Point(12, 101);
             this.prbProgress.Name = "prbProgress";
-            this.prbProgress.Size = new System.Drawing.Size(393, 39);
+            this.prbProgress.Size = new System.Drawing.Size(393, 37);
             this.prbProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.prbProgress.TabIndex = 3;
             this.prbProgress.Visible = false;
@@ -150,11 +153,28 @@
             this.txbMax.TabIndex = 4;
             this.txbMax.Text = "1000";
             // 
+            // prbAnswerTime
+            // 
+            this.prbAnswerTime.Location = new System.Drawing.Point(412, 77);
+            this.prbAnswerTime.Maximum = 5;
+            this.prbAnswerTime.Name = "prbAnswerTime";
+            this.prbAnswerTime.Size = new System.Drawing.Size(67, 18);
+            this.prbAnswerTime.Step = 1;
+            this.prbAnswerTime.TabIndex = 5;
+            this.prbAnswerTime.Value = 1;
+            this.prbAnswerTime.Visible = false;
+            // 
+            // tmrAnswer
+            // 
+            this.tmrAnswer.Interval = 1000;
+            this.tmrAnswer.Tick += new System.EventHandler(this.tmrAnswer_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 149);
+            this.ClientSize = new System.Drawing.Size(694, 151);
+            this.Controls.Add(this.prbAnswerTime);
             this.Controls.Add(this.txbMax);
             this.Controls.Add(this.btnAnswer);
             this.Controls.Add(this.btnDivs);
@@ -165,6 +185,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblThink);
             this.Controls.Add(this.prbProgress);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -188,6 +209,8 @@
         private System.Windows.Forms.Button btnMult;
         private System.Windows.Forms.Button btnDivs;
         private System.Windows.Forms.TextBox txbMax;
+        private System.Windows.Forms.ProgressBar prbAnswerTime;
+        private System.Windows.Forms.Timer tmrAnswer;
     }
 }
 

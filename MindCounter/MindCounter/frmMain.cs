@@ -18,6 +18,8 @@ namespace MindCounter
         int minValue = 1;
         int maxValue = 10;
         int countQuestionMax = 2;
+        int timePerQuestion = 5;
+        int currentTime = 0;
         string currentAnswer;
         GameMode currentMode;
 
@@ -57,6 +59,8 @@ namespace MindCounter
             prbProgress.Value = 0;
             countQuestion = 0;
             txbAnswer.Focus();
+            prbAnswerTime.Visible = true;
+            prbAnswerTime.Maximum = timePerQuestion;
             try
             {
                 maxValue = Convert.ToInt16(txbMax.Text);
@@ -108,6 +112,9 @@ namespace MindCounter
                     }
                     break;
             }
+            currentTime = 0;
+            prbAnswerTime.Value = 0;
+            tmrAnswer.Enabled = true;
             countQuestion++;
         }
 
@@ -137,6 +144,7 @@ namespace MindCounter
                 return;
             }
 
+            tmrAnswer.Enabled = false;
             if (txbAnswer.Text == currentAnswer)
             {
                 txbAnswer.Text = "";
@@ -179,6 +187,7 @@ namespace MindCounter
             btnMult.Visible = true;
             btnDivs.Visible = true;
             txbMax.Enabled = true;
+            prbAnswerTime.Visible = false;
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
@@ -199,6 +208,20 @@ namespace MindCounter
         private void btnDivs_Click(object sender, EventArgs e)
         {
             startGame(GameMode.Divs);
+        }
+
+        private void tmrAnswer_Tick(object sender, EventArgs e)
+        {
+            if (currentTime < timePerQuestion)
+            {
+                currentTime++;
+                prbAnswerTime.Value = currentTime;
+            }
+            else
+            {
+                tmrAnswer.Enabled = false;
+                gameOver();
+            }
         }
     }
 }
