@@ -17,6 +17,10 @@ namespace Arkanoid
         int ballX;
         int ballY;
         int paddleShiftX = 10;
+        int ballShiftX = 5;
+        int ballShiftY = 3;
+        int ballSX;
+        int ballSY;
         int wallLx;
         int wallRx;
         int wallTy;
@@ -33,6 +37,8 @@ namespace Arkanoid
             wallLx = lblWallLeft.Location.X + lblWallLeft.Size.Width;
             wallRx = lblWallRight.Location.X;
             wallTy = lblWallTop.Location.X + lblWallTop.Size.Height;
+            ballX = ball.Location.X;
+            ballY = ball.Location.Y;
         }
 
         private void frmGame_KeyDown(object sender, KeyEventArgs e)
@@ -62,6 +68,18 @@ namespace Arkanoid
             if (wallRx < aXRight) aXLeft = wallRx - paddle.Size.Width;
             paddleX = aXLeft;
             paddle.Location = new Point(paddleX, paddleY);
+        }
+
+        private void shiftBall()
+        {
+            ballX += ballSX;
+            ballY += ballSY;
+            ball.Location = new Point(ballX, ballY);
+        }
+
+        private void tmrBall_Tick(object sender, EventArgs e)
+        {
+            shiftBall();
         }
     }
 }

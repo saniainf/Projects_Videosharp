@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGame));
             this.lblWallTop = new System.Windows.Forms.Label();
             this.lblWallLeft = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.lblBrick6 = new System.Windows.Forms.Label();
             this.lblBrick5 = new System.Windows.Forms.Label();
             this.lblBrick8 = new System.Windows.Forms.Label();
+            this.tmrBall = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblWallTop
@@ -159,6 +161,11 @@
             this.lblBrick8.Size = new System.Drawing.Size(75, 23);
             this.lblBrick8.TabIndex = 0;
             // 
+            // tmrBall
+            // 
+            this.tmrBall.Interval = 40;
+            this.tmrBall.Tick += new System.EventHandler(this.tmrBall_Tick);
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,5 +213,6 @@
         private System.Windows.Forms.Label lblBrick6;
         private System.Windows.Forms.Label lblBrick5;
         private System.Windows.Forms.Label lblBrick8;
+        private System.Windows.Forms.Timer tmrBall;
     }
 }
