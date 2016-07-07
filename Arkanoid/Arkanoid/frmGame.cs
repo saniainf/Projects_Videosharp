@@ -17,8 +17,8 @@ namespace Arkanoid
         int ballX;
         int ballY;
         int paddleShiftX = 10;
-        int ballShiftX = 5;
-        int ballShiftY = 3;
+        int ballShiftX = 1;
+        int ballShiftY = 1;
         int ballSX;
         int ballSY;
         int wallLx;

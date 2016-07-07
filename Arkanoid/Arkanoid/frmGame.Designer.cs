@@ -163,7 +163,7 @@
             // 
             // tmrBall
             // 
-            this.tmrBall.Interval = 40;
+            this.tmrBall.Interval = 2;
             this.tmrBall.Tick += new System.EventHandler(this.tmrBall_Tick);
             // 
             // frmGame
