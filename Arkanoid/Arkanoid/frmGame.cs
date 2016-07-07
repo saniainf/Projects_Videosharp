@@ -39,6 +39,8 @@ namespace Arkanoid
             wallTy = lblWallTop.Location.X + lblWallTop.Size.Height;
             ballX = ball.Location.X;
             ballY = ball.Location.Y;
+            ballSX = ballShiftX;
+            ballSY = -ballShiftY;
         }
 
         private void frmGame_KeyDown(object sender, KeyEventArgs e)
@@ -51,6 +53,9 @@ namespace Arkanoid
                     break;
                 case Keys.Right:
                     shiftPaddle(paddleShiftX);
+                    break;
+                case Keys.Enter:
+                    tmrBall.Enabled = true;
                     break;
             }
         }
@@ -72,6 +77,16 @@ namespace Arkanoid
 
         private void shiftBall()
         {
+            int bTop, bBot, bLeft, bRight;
+            bTop = ballX;
+            bBot = ballX + ball.Size.Width;
+            bLeft = ballY;
+            bRight = ballY + ball.Size.Height;
+            if ((bLeft + ballSX) < wallLx)
+                ballSX = ballShiftX;
+            if (bRight + ballSX > wallRx)
+                ballSX = -ballShiftX;
+            // переписать нахрен
             ballX += ballSX;
             ballY += ballSY;
             ball.Location = new Point(ballX, ballY);

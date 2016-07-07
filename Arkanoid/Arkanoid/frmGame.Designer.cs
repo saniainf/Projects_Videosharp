@@ -89,7 +89,7 @@
             this.ball.BackColor = System.Drawing.Color.Transparent;
             this.ball.Checked = true;
             this.ball.Enabled = false;
-            this.ball.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ball.ForeColor = System.Drawing.Color.Transparent;
             this.ball.Location = new System.Drawing.Point(396, 555);
             this.ball.Name = "ball";
             this.ball.Size = new System.Drawing.Size(14, 13);
