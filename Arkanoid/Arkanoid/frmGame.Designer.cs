@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGame));
-            this.lblWallTop = new System.Windows.Forms.Label();
-            this.lblWallLeft = new System.Windows.Forms.Label();
-            this.lblWallRight = new System.Windows.Forms.Label();
             this.paddle = new System.Windows.Forms.Button();
             this.ball = new System.Windows.Forms.RadioButton();
             this.lblBrick1 = new System.Windows.Forms.Label();
@@ -44,31 +41,17 @@
             this.lblBrick5 = new System.Windows.Forms.Label();
             this.lblBrick8 = new System.Windows.Forms.Label();
             this.tmrBall = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblWallTop
-            // 
-            this.lblWallTop.BackColor = System.Drawing.Color.SlateGray;
-            this.lblWallTop.Location = new System.Drawing.Point(-6, -6);
-            this.lblWallTop.Name = "lblWallTop";
-            this.lblWallTop.Size = new System.Drawing.Size(809, 23);
-            this.lblWallTop.TabIndex = 0;
-            // 
-            // lblWallLeft
-            // 
-            this.lblWallLeft.BackColor = System.Drawing.Color.SlateGray;
-            this.lblWallLeft.Location = new System.Drawing.Point(-3, -3);
-            this.lblWallLeft.Name = "lblWallLeft";
-            this.lblWallLeft.Size = new System.Drawing.Size(20, 574);
-            this.lblWallLeft.TabIndex = 0;
-            // 
-            // lblWallRight
-            // 
-            this.lblWallRight.BackColor = System.Drawing.Color.SlateGray;
-            this.lblWallRight.Location = new System.Drawing.Point(783, -3);
-            this.lblWallRight.Name = "lblWallRight";
-            this.lblWallRight.Size = new System.Drawing.Size(20, 574);
-            this.lblWallRight.TabIndex = 0;
             // 
             // paddle
             // 
@@ -166,16 +149,68 @@
             this.tmrBall.Interval = 2;
             this.tmrBall.Tick += new System.EventHandler(this.tmrBall_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 768);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1024, 32);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(992, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 768);
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.Location = new System.Drawing.Point(555, 455);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(96, 24);
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.Location = new System.Drawing.Point(647, 391);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ball);
             this.Controls.Add(this.paddle);
-            this.Controls.Add(this.lblWallRight);
-            this.Controls.Add(this.lblWallLeft);
             this.Controls.Add(this.lblBrick5);
             this.Controls.Add(this.lblBrick8);
             this.Controls.Add(this.lblBrick6);
@@ -184,7 +219,6 @@
             this.Controls.Add(this.lblBrick3);
             this.Controls.Add(this.lblBrick2);
             this.Controls.Add(this.lblBrick1);
-            this.Controls.Add(this.lblWallTop);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -193,6 +227,11 @@
             this.Text = "Арканоид";
             this.Shown += new System.EventHandler(this.frmGame_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGame_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,9 +239,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblWallTop;
-        private System.Windows.Forms.Label lblWallLeft;
-        private System.Windows.Forms.Label lblWallRight;
         private System.Windows.Forms.Button paddle;
         private System.Windows.Forms.RadioButton ball;
         private System.Windows.Forms.Label lblBrick1;
@@ -214,5 +250,10 @@
         private System.Windows.Forms.Label lblBrick5;
         private System.Windows.Forms.Label lblBrick8;
         private System.Windows.Forms.Timer tmrBall;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
