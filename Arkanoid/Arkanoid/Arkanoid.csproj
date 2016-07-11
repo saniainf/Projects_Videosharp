@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pixel Arkanoid_ico_PixelArkanoidIco.ico" />
+    <None Include="Resources\brick.png" />
     <None Include="Resources\Arkanoid-Logo-New.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
