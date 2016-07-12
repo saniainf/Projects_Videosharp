@@ -49,6 +49,7 @@
             this.pcbOne.Size = new System.Drawing.Size(128, 128);
             this.pcbOne.TabIndex = 0;
             this.pcbOne.TabStop = false;
+            this.pcbOne.Click += new System.EventHandler(this.picClick);
             // 
             // pcbTwo
             // 
@@ -59,6 +60,7 @@
             this.pcbTwo.Size = new System.Drawing.Size(128, 128);
             this.pcbTwo.TabIndex = 0;
             this.pcbTwo.TabStop = false;
+            this.pcbTwo.Click += new System.EventHandler(this.picClick);
             // 
             // pcbThree
             // 
@@ -69,20 +71,22 @@
             this.pcbThree.Size = new System.Drawing.Size(128, 128);
             this.pcbThree.TabIndex = 0;
             this.pcbThree.TabStop = false;
+            this.pcbThree.Click += new System.EventHandler(this.picClick);
             // 
             // btnStart
             // 
+            this.btnStart.BackColor = System.Drawing.Color.Transparent;
             this.btnStart.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnStart.Location = new System.Drawing.Point(127, 170);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(167, 44);
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Запуск";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // tmr
             // 
-            this.tmr.Enabled = true;
             this.tmr.Interval = 700;
             this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
             // 
@@ -90,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(421, 227);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pcbThree);
