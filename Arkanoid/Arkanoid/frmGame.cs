@@ -23,6 +23,10 @@ namespace Arkanoid
         Point startBallDirection;
         List<PictureBox> bricks;
         Point startBricks;
+        int ballRadius;
+        int score;
+        int lifeCount;
+        bool gameDone;
 
         public frmGame()
         {
@@ -39,7 +43,12 @@ namespace Arkanoid
             startBallDirection = ballDirection;
             startBallLocation = ballRect.Location;
             startPaddleLocation = paddleRect.Location;
+            ballRadius = ballRect.Width / 2;
+            score = 0;
+            lifeCount = 8;
             fillBricksGameField();
+            tmrBall.Enabled = true;
+            gameDone = false;
         }
 
         private void fillBricksGameField()
@@ -74,7 +83,12 @@ namespace Arkanoid
                 case Keys.Enter:
                     tmrBall.Enabled = true;
                     break;
+                case Keys.Escape:
+                    DialogResult = System.Windows.Forms.DialogResult.OK;
+                    break;
             }
+            if (gameDone)
+                DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
         private void frmGame_Shown(object sender, EventArgs e)
@@ -121,7 +135,7 @@ namespace Arkanoid
             ballRect.Location = new Point(ballRect.Location.X + ballDirection.X, ballRect.Location.Y + ballDirection.Y);
             if (ballRect.Bottom > gameField.Bottom)
             {
-                placeToStartLocation();
+                missBall();
                 return;
             }
             ball.Location = ballRect.Location;
@@ -130,14 +144,111 @@ namespace Arkanoid
         private void intersects()
         {
             Point ballCenter = new Point(ballRect.Left + (ballRect.Size.Width / 2), ballRect.Top + (ballRect.Size.Height / 2));
+
             foreach (PictureBox pcb in bricks)
             {
                 if (pcb.Visible)
                 {
                     Point pcbCenter = new Point(pcb.Location.X + (pcb.Size.Width / 2), pcb.Location.Y + (pcb.Size.Height / 2));
+                    Rectangle rectBrick = new Rectangle(pcb.Location.X, pcb.Location.Y, pcb.Size.Width, pcb.Size.Height);
+
+                    if (ballCenter.X >= rectBrick.Left &
+                        ballCenter.X <= rectBrick.Right &
+                        ballCenter.Y >= rectBrick.Top - ballRadius &
+                        ballCenter.Y <= rectBrick.Top)
+                    {
+                        //reflectStr = "Top";
+                        ballDirection.Y = -(Math.Abs(ballDirection.Y));
+                        pcb.Visible = false;
+                        score += 10;
+                        return;
+                    }
+                    else if (ballCenter.X >= rectBrick.Left &
+                        ballCenter.X <= rectBrick.Right &
+                        ballCenter.Y >= rectBrick.Bottom &
+                        ballCenter.Y <= rectBrick.Bottom + ballRadius)
+                    {
+                        //reflectStr = "Bottom";
+                        ballDirection.Y = Math.Abs(ballDirection.Y);
+                        pcb.Visible = false;
+                        score += 10;
+                        return;
+                    }
+                    else if (ballCenter.X >= rectBrick.Left - ballRadius &
+                        ballCenter.X <= rectBrick.Left &
+                        ballCenter.Y >= rectBrick.Top &
+                        ballCenter.Y <= rectBrick.Bottom)
+                    {
+                        //reflectStr = "Left";
+                        ballDirection.X = -(Math.Abs(ballDirection.X));
+                        pcb.Visible = false;
+                        score += 10;
+                        return;
+                    }
+                    else if (ballCenter.X >= rectBrick.Right &
+                        ballCenter.X <= rectBrick.Right + ballRadius &
+                        ballCenter.Y >= rectBrick.Top &
+                        ballCenter.Y <= rectBrick.Bottom)
+                    {
+                        //reflectStr = "Right";
+                        ballDirection.X = Math.Abs(ballDirection.X);
+                        pcb.Visible = false;
+                        score += 10;
+                        return;
+                    }
                 }
             }
+        }
 
+        private void uiUpdate()
+        {
+            lblScore.Text = "Score: " + score.ToString();
+            lblLife.Text = new string('Y', lifeCount);
+        }
+
+        private void missBall()
+        {
+            lifeCount--;
+            placeToStartLocation();
+        }
+
+        private void checkWinLose()
+        {
+            if (lifeCount == 0)
+            {
+                gameOver();
+                return;
+            }
+            bool lvlClear = true;
+            foreach (PictureBox pcb in bricks)
+                if (pcb.Visible)
+                    lvlClear = false;
+            if (lvlClear)
+                gameWin();
+        }
+
+        private void gameOver()
+        {
+            tmrBall.Enabled = false;
+            foreach (PictureBox pcb in bricks)
+                pcb.Visible = false;
+            ball.Visible = false;
+            paddle.Visible = false;
+            pcbSign.Visible = true;
+            pcbSign.BackgroundImage = global::Arkanoid.Properties.Resources.lblLose;
+            gameDone = true;
+        }
+
+        private void gameWin()
+        {
+            tmrBall.Enabled = false;
+            foreach (PictureBox pcb in bricks)
+                pcb.Visible = false;
+            ball.Visible = false;
+            paddle.Visible = false;
+            pcbSign.Visible = true;
+            pcbSign.BackgroundImage = global::Arkanoid.Properties.Resources.lblWin;
+            gameDone = true;
         }
 
         private void placeToStartLocation()
@@ -152,6 +263,8 @@ namespace Arkanoid
         {
             shiftBall();
             intersects();
+            uiUpdate();
+            checkWinLose();
         }
     }
 }

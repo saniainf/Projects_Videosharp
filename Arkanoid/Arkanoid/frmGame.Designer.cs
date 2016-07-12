@@ -36,16 +36,19 @@
             this.rightWall = new System.Windows.Forms.PictureBox();
             this.paddle = new System.Windows.Forms.PictureBox();
             this.ball = new System.Windows.Forms.PictureBox();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblLife = new System.Windows.Forms.Label();
+            this.pcbSign = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.leftWall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopWall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightWall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paddle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSign)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrBall
             // 
-            this.tmrBall.Enabled = true;
             this.tmrBall.Interval = 7;
             this.tmrBall.Tick += new System.EventHandler(this.tmrBall_Tick);
             // 
@@ -97,6 +100,39 @@
             this.ball.TabIndex = 6;
             this.ball.TabStop = false;
             // 
+            // lblScore
+            // 
+            this.lblScore.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblScore.ForeColor = System.Drawing.Color.Lime;
+            this.lblScore.Location = new System.Drawing.Point(107, 4);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(170, 23);
+            this.lblScore.TabIndex = 7;
+            this.lblScore.Text = "Score: ";
+            this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblLife
+            // 
+            this.lblLife.Font = new System.Drawing.Font("Webdings", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lblLife.ForeColor = System.Drawing.Color.Red;
+            this.lblLife.Location = new System.Drawing.Point(746, 4);
+            this.lblLife.Name = "lblLife";
+            this.lblLife.Size = new System.Drawing.Size(170, 23);
+            this.lblLife.TabIndex = 7;
+            this.lblLife.Text = "YYYYYYYY";
+            this.lblLife.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pcbSign
+            // 
+            this.pcbSign.BackColor = System.Drawing.Color.Transparent;
+            this.pcbSign.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbSign.Location = new System.Drawing.Point(161, 149);
+            this.pcbSign.Name = "pcbSign";
+            this.pcbSign.Size = new System.Drawing.Size(702, 456);
+            this.pcbSign.TabIndex = 8;
+            this.pcbSign.TabStop = false;
+            this.pcbSign.Visible = false;
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +140,9 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.pcbSign);
+            this.Controls.Add(this.lblLife);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.ball);
             this.Controls.Add(this.paddle);
             this.Controls.Add(this.TopWall);
@@ -122,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rightWall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paddle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSign)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,5 +174,8 @@
         private System.Windows.Forms.PictureBox rightWall;
         private System.Windows.Forms.PictureBox paddle;
         private System.Windows.Forms.PictureBox ball;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblLife;
+        private System.Windows.Forms.PictureBox pcbSign;
     }
 }

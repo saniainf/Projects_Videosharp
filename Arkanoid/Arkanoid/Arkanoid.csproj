@@ -92,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pixel Arkanoid_ico_PixelArkanoidIco.ico" />
+    <None Include="Resources\lblWin.png" />
+    <None Include="Resources\lblLose.png" />
     <None Include="Resources\brick.png" />
     <None Include="Resources\Arkanoid-Logo-New.png" />
   </ItemGroup>
