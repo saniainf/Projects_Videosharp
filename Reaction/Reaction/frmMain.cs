@@ -72,7 +72,7 @@ namespace Reaction
         private void showResult()
         {
             double sec = reactionTime / 1000.0 / totalRound;
-            MessageBox.Show("Среднее время реакции: " + sec.ToString("0.000") + " сек.", "Результат");
+            MessageBox.Show("Среднее время реакции: " + sec.ToString("0.0000") + " сек.", "Результат");
             btnStart.Enabled = true;
             clickNum = -1;
         }
