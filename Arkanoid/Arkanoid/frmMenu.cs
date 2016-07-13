@@ -22,5 +22,10 @@ namespace Arkanoid
             frmGame game = new frmGame();
             game.ShowDialog();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

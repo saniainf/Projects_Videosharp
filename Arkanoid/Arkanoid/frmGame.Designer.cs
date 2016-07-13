@@ -84,7 +84,7 @@
             this.paddle.BackColor = System.Drawing.Color.Transparent;
             this.paddle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("paddle.BackgroundImage")));
             this.paddle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.paddle.Location = new System.Drawing.Point(464, 732);
+            this.paddle.Location = new System.Drawing.Point(466, 693);
             this.paddle.Name = "paddle";
             this.paddle.Size = new System.Drawing.Size(96, 24);
             this.paddle.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             this.ball.BackColor = System.Drawing.Color.Transparent;
             this.ball.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ball.BackgroundImage")));
-            this.ball.Location = new System.Drawing.Point(497, 704);
+            this.ball.Location = new System.Drawing.Point(499, 665);
             this.ball.Name = "ball";
             this.ball.Size = new System.Drawing.Size(30, 30);
             this.ball.TabIndex = 6;

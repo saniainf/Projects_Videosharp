@@ -45,7 +45,7 @@ namespace Arkanoid
             startPaddleLocation = paddleRect.Location;
             ballRadius = ballRect.Width / 2;
             score = 0;
-            lifeCount = 8;
+            lifeCount = 7;
             fillBricksGameField();
             tmrBall.Enabled = true;
             gameDone = false;
@@ -55,7 +55,7 @@ namespace Arkanoid
         {
             startBricks = new Point(40, 40);
             bricks = new List<PictureBox>();
-            for (int j = 8; j >= 0; j--)
+            for (int j = 5; j >= 0; j--)
                 for (int i = 12; i >= 0; i--)
                 {
                     PictureBox pcb = new PictureBox();
