@@ -99,18 +99,18 @@
             // mnuGameNewGame
             // 
             this.mnuGameNewGame.Name = "mnuGameNewGame";
-            this.mnuGameNewGame.Size = new System.Drawing.Size(152, 22);
+            this.mnuGameNewGame.Size = new System.Drawing.Size(136, 22);
             this.mnuGameNewGame.Text = "Новая игра";
             // 
             // mnuSep1
             // 
             this.mnuSep1.Name = "mnuSep1";
-            this.mnuSep1.Size = new System.Drawing.Size(149, 6);
+            this.mnuSep1.Size = new System.Drawing.Size(133, 6);
             // 
             // mnuGameExit
             // 
             this.mnuGameExit.Name = "mnuGameExit";
-            this.mnuGameExit.Size = new System.Drawing.Size(152, 22);
+            this.mnuGameExit.Size = new System.Drawing.Size(136, 22);
             this.mnuGameExit.Text = "Выход";
             this.mnuGameExit.Click += new System.EventHandler(this.mnuGameExit_Click);
             // 
@@ -187,6 +187,8 @@
             this.pcb1.Size = new System.Drawing.Size(128, 128);
             this.pcb1.TabIndex = 0;
             this.pcb1.TabStop = false;
+            this.pcb1.Tag = "0";
+            this.pcb1.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb2
             // 
@@ -196,6 +198,8 @@
             this.pcb2.Size = new System.Drawing.Size(128, 128);
             this.pcb2.TabIndex = 0;
             this.pcb2.TabStop = false;
+            this.pcb2.Tag = "1";
+            this.pcb2.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb3
             // 
@@ -205,6 +209,8 @@
             this.pcb3.Size = new System.Drawing.Size(128, 128);
             this.pcb3.TabIndex = 0;
             this.pcb3.TabStop = false;
+            this.pcb3.Tag = "2";
+            this.pcb3.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb4
             // 
@@ -214,6 +220,8 @@
             this.pcb4.Size = new System.Drawing.Size(128, 128);
             this.pcb4.TabIndex = 0;
             this.pcb4.TabStop = false;
+            this.pcb4.Tag = "3";
+            this.pcb4.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb5
             // 
@@ -223,6 +231,8 @@
             this.pcb5.Size = new System.Drawing.Size(128, 128);
             this.pcb5.TabIndex = 0;
             this.pcb5.TabStop = false;
+            this.pcb5.Tag = "4";
+            this.pcb5.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb6
             // 
@@ -232,6 +242,8 @@
             this.pcb6.Size = new System.Drawing.Size(128, 128);
             this.pcb6.TabIndex = 0;
             this.pcb6.TabStop = false;
+            this.pcb6.Tag = "5";
+            this.pcb6.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb7
             // 
@@ -241,6 +253,8 @@
             this.pcb7.Size = new System.Drawing.Size(128, 128);
             this.pcb7.TabIndex = 0;
             this.pcb7.TabStop = false;
+            this.pcb7.Tag = "6";
+            this.pcb7.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb8
             // 
@@ -250,6 +264,8 @@
             this.pcb8.Size = new System.Drawing.Size(128, 128);
             this.pcb8.TabIndex = 0;
             this.pcb8.TabStop = false;
+            this.pcb8.Tag = "7";
+            this.pcb8.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb9
             // 
@@ -259,6 +275,8 @@
             this.pcb9.Size = new System.Drawing.Size(128, 128);
             this.pcb9.TabIndex = 0;
             this.pcb9.TabStop = false;
+            this.pcb9.Tag = "8";
+            this.pcb9.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb10
             // 
@@ -268,6 +286,8 @@
             this.pcb10.Size = new System.Drawing.Size(128, 128);
             this.pcb10.TabIndex = 0;
             this.pcb10.TabStop = false;
+            this.pcb10.Tag = "9";
+            this.pcb10.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb11
             // 
@@ -277,6 +297,8 @@
             this.pcb11.Size = new System.Drawing.Size(128, 128);
             this.pcb11.TabIndex = 0;
             this.pcb11.TabStop = false;
+            this.pcb11.Tag = "10";
+            this.pcb11.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb12
             // 
@@ -286,6 +308,8 @@
             this.pcb12.Size = new System.Drawing.Size(128, 128);
             this.pcb12.TabIndex = 0;
             this.pcb12.TabStop = false;
+            this.pcb12.Tag = "11";
+            this.pcb12.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb13
             // 
@@ -295,6 +319,8 @@
             this.pcb13.Size = new System.Drawing.Size(128, 128);
             this.pcb13.TabIndex = 0;
             this.pcb13.TabStop = false;
+            this.pcb13.Tag = "12";
+            this.pcb13.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb14
             // 
@@ -304,6 +330,8 @@
             this.pcb14.Size = new System.Drawing.Size(128, 128);
             this.pcb14.TabIndex = 0;
             this.pcb14.TabStop = false;
+            this.pcb14.Tag = "13";
+            this.pcb14.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb15
             // 
@@ -313,6 +341,8 @@
             this.pcb15.Size = new System.Drawing.Size(128, 128);
             this.pcb15.TabIndex = 0;
             this.pcb15.TabStop = false;
+            this.pcb15.Tag = "14";
+            this.pcb15.Click += new System.EventHandler(this.pcb_Click);
             // 
             // pcb16
             // 
@@ -322,6 +352,8 @@
             this.pcb16.Size = new System.Drawing.Size(128, 128);
             this.pcb16.TabIndex = 0;
             this.pcb16.TabStop = false;
+            this.pcb16.Tag = "15";
+            this.pcb16.Click += new System.EventHandler(this.pcb_Click);
             // 
             // frmMain
             // 
