@@ -99,18 +99,21 @@
             // mnuGameNewGame
             // 
             this.mnuGameNewGame.Name = "mnuGameNewGame";
-            this.mnuGameNewGame.Size = new System.Drawing.Size(136, 22);
+            this.mnuGameNewGame.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.mnuGameNewGame.Size = new System.Drawing.Size(155, 22);
             this.mnuGameNewGame.Text = "Новая игра";
+            this.mnuGameNewGame.Click += new System.EventHandler(this.mnuGameNewGame_Click);
             // 
             // mnuSep1
             // 
             this.mnuSep1.Name = "mnuSep1";
-            this.mnuSep1.Size = new System.Drawing.Size(133, 6);
+            this.mnuSep1.Size = new System.Drawing.Size(149, 6);
             // 
             // mnuGameExit
             // 
             this.mnuGameExit.Name = "mnuGameExit";
-            this.mnuGameExit.Size = new System.Drawing.Size(136, 22);
+            this.mnuGameExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
+            this.mnuGameExit.Size = new System.Drawing.Size(155, 22);
             this.mnuGameExit.Text = "Выход";
             this.mnuGameExit.Click += new System.EventHandler(this.mnuGameExit_Click);
             // 
@@ -127,7 +130,8 @@
             // mnuHelpRules
             // 
             this.mnuHelpRules.Name = "mnuHelpRules";
-            this.mnuHelpRules.Size = new System.Drawing.Size(153, 22);
+            this.mnuHelpRules.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.mnuHelpRules.Size = new System.Drawing.Size(195, 22);
             this.mnuHelpRules.Text = "Правила игры";
             this.mnuHelpRules.Click += new System.EventHandler(this.mnuHelpRules_Click);
             // 
@@ -139,7 +143,8 @@
             // mnuHelpAbout
             // 
             this.mnuHelpAbout.Name = "mnuHelpAbout";
-            this.mnuHelpAbout.Size = new System.Drawing.Size(153, 22);
+            this.mnuHelpAbout.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.mnuHelpAbout.Size = new System.Drawing.Size(195, 22);
             this.mnuHelpAbout.Text = "О программе";
             this.mnuHelpAbout.Click += new System.EventHandler(this.mnuHelpAbout_Click);
             // 
