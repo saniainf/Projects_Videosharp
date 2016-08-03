@@ -31,7 +31,10 @@ namespace MemoryGame
             shuffleCards();
             for (int j = 0; j < cards.Length; j++)
                 hidePcb(j);
+            for (int i = 0; i < opensPcb.Length; i++)
+                opensPcb[i] = false;
             done = 0;
+            pcbStartPicture.Visible = false;
             gameMode = Mode.Begin;
 
         }
@@ -62,7 +65,7 @@ namespace MemoryGame
         public frmMain()
         {
             InitializeComponent();
-            InitGame();
+            //InitGame();
         }
 
         private void mnuGameExit_Click(object sender, EventArgs e)

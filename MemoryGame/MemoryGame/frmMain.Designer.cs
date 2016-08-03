@@ -55,6 +55,7 @@
             this.pcb14 = new System.Windows.Forms.PictureBox();
             this.pcb15 = new System.Windows.Forms.PictureBox();
             this.pcb16 = new System.Windows.Forms.PictureBox();
+            this.pcbStartPicture = new System.Windows.Forms.PictureBox();
             this.mnuMain.SuspendLayout();
             this.tblpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb1)).BeginInit();
@@ -73,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcb14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStartPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuMain
@@ -107,7 +109,7 @@
             // mnuSep1
             // 
             this.mnuSep1.Name = "mnuSep1";
-            this.mnuSep1.Size = new System.Drawing.Size(149, 6);
+            this.mnuSep1.Size = new System.Drawing.Size(152, 6);
             // 
             // mnuGameExit
             // 
@@ -138,7 +140,7 @@
             // mnuSep2
             // 
             this.mnuSep2.Name = "mnuSep2";
-            this.mnuSep2.Size = new System.Drawing.Size(150, 6);
+            this.mnuSep2.Size = new System.Drawing.Size(192, 6);
             // 
             // mnuHelpAbout
             // 
@@ -360,12 +362,23 @@
             this.pcb16.Tag = "15";
             this.pcb16.Click += new System.EventHandler(this.pcb_Click);
             // 
+            // pcbStartPicture
+            // 
+            this.pcbStartPicture.BackgroundImage = global::MemoryGame.Properties.Resources.Memory_Game;
+            this.pcbStartPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pcbStartPicture.Location = new System.Drawing.Point(0, 28);
+            this.pcbStartPicture.Name = "pcbStartPicture";
+            this.pcbStartPicture.Size = new System.Drawing.Size(572, 568);
+            this.pcbStartPicture.TabIndex = 2;
+            this.pcbStartPicture.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(572, 598);
+            this.Controls.Add(this.pcbStartPicture);
             this.Controls.Add(this.tblpMain);
             this.Controls.Add(this.mnuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -394,6 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcb14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStartPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,6 +441,7 @@
         private System.Windows.Forms.PictureBox pcb14;
         private System.Windows.Forms.PictureBox pcb15;
         private System.Windows.Forms.PictureBox pcb16;
+        private System.Windows.Forms.PictureBox pcbStartPicture;
     }
 }
 
