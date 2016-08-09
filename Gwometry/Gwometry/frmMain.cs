@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Gwometry
@@ -16,12 +9,16 @@ namespace Gwometry
         Graphics graph;
         Pen pen;
 
-        Line line1;
-        Line line2;
-        Line line3;
-        Line line4;
-        Box box1;
-        Box box2;
+        Line roofLeft;
+        Line roofRight;
+        ColorLine colorLine1;
+        ColorLine colorLine2;
+        Box houseWall;
+        ColorBox houseWindow;
+        Circle roofWindow;
+        ColorCircle circle1;
+
+        Pixel A, B, C, D, E, O, center;
 
         public frmMain()
         {
@@ -36,34 +33,66 @@ namespace Gwometry
             graph = Graphics.FromImage(bmp);
             pen = new Pen(Color.Blue, 2f);
 
-            line1 = new Line(100, 100, 250, 10);
-            line2 = new Line(250, 10, 400, 100);
-            line3 = new Line(250, 150, 250, 250);
-            line4 = new Line(250, 200, 300, 200);
-            box1 = new Box(100, 100, 400, 300);
-            box2 = new Box(200, 150, 300, 250);
+            A = new Pixel(100, 300);
+            B = new Pixel(400, 300);
+            C = new Pixel(100, 100);
+            D = new Pixel(400, 100);
+            E = new Pixel(250, 10);
+            O = new Pixel(250, 55);
+            center = new Pixel(250, 200);
+
+            roofLeft = new Line(C, E);
+            roofRight = new Line(E, D);
+            houseWall = new Box(C, B);
+            roofWindow = new Circle(O, 20);
+            houseWindow = new ColorBox(200, 150, 300, 250, Color.Turquoise);
+            colorLine1 = new ColorLine(A, D, Color.Red);
+            colorLine2 = new ColorLine(C, B, Color.Red);
+            circle1 = new ColorCircle(center, B, Color.Purple);
         }
 
         private void Draw()
         {
-            Draw(line1);
-            Draw(line2);
-            Draw(line3);
-            Draw(line4);
-            Draw(box1);
-            Draw(box2);
+            Draw(roofLeft);
+            Draw(roofRight);
+            Draw(colorLine1);
+            Draw(colorLine2);
+            Draw(houseWall);
+            Draw(houseWindow);
+            Draw(roofWindow);
+            Draw(circle1);
 
             pcbMain.Image = bmp;
         }
 
         private void Draw(Line line)
         {
-            graph.DrawLine(pen, line.X1, line.Y1, line.X2, line.Y2);
+            graph.DrawLine(pen, line.begin.X, line.begin.Y, line.ended.X, line.ended.Y);
+        }
+
+        private void Draw(ColorLine colorLine)
+        {
+            graph.DrawLine(colorLine.pen, colorLine.begin.X, colorLine.begin.Y, colorLine.ended.X, colorLine.ended.Y);
         }
 
         private void Draw(Box box)
         {
-            graph.DrawRectangle(pen, box.X1, box.Y1, box.width, box.height);
+            graph.DrawRectangle(pen, box.leftTop.X, box.leftTop.Y, box.width, box.height);
+        }
+
+        private void Draw(ColorBox colorBox)
+        {
+            graph.DrawRectangle(colorBox.pen, colorBox.leftTop.X, colorBox.leftTop.Y, colorBox.width, colorBox.height);
+        }
+
+        private void Draw(Circle circle)
+        {
+            graph.DrawEllipse(pen, circle.leftTop.X, circle.leftTop.Y, circle.width, circle.height);
+        }
+
+        private void Draw(ColorCircle colorCircle)
+        {
+            graph.DrawEllipse(colorCircle.pen, colorCircle.leftTop.X, colorCircle.leftTop.Y, colorCircle.width, colorCircle.height);
         }
     }
 }

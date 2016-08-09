@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Gwometry
 {
     class Line
     {
-        public int X1, Y1;
-        public int X2, Y2;
+        public Pixel begin;
+        public Pixel ended;
 
         public Line(int x1, int y1, int x2, int y2)
+            : this(new Pixel(x1, y1), new Pixel(x2, y2))
         {
-            X1 = x1;
-            Y1 = y1;
-            X2 = x2;
-            Y2 = y2;
+
+        }
+
+        public Line(Pixel begin, Pixel ended)
+        {
+            this.begin = begin;
+            this.ended = ended;
         }
     }
 }
