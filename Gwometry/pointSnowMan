@@ -1,0 +1,13 @@
+A= new Pixel (200, 50);
+B= new Pixel (200, 200);
+C= new Pixel (200, 450);
+D= new Pixel (200, 100);
+E= new Pixel (200, 300);
+F= new Pixel (20,20) ;
+G= new Pixel (20,20);
+H= new Pixel (20,20);
+I= new Pixel (20,20);
+J= new Pixel (20,20);
+K= new Pixel (20,20);
+L= new Pixel(20,20) ;
+M= new Pixel (20,20);

@@ -39,7 +39,7 @@
             this.pcbMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbMain.Location = new System.Drawing.Point(0, 0);
             this.pcbMain.Name = "pcbMain";
-            this.pcbMain.Size = new System.Drawing.Size(637, 516);
+            this.pcbMain.Size = new System.Drawing.Size(1166, 718);
             this.pcbMain.TabIndex = 0;
             this.pcbMain.TabStop = false;
             // 
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 516);
+            this.ClientSize = new System.Drawing.Size(1166, 718);
             this.Controls.Add(this.pcbMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
