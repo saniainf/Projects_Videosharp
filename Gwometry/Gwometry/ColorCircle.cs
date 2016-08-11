@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 
 namespace Gwometry
 {
-    class ColorCircle
+    class ColorCircle : Circle
     {
-        public Pixel center;
-        public Pixel leftTop;
-        public int radius;
-        public int width;
-        public int height;
         public Pen pen;
 
         public ColorCircle(int x, int y, int radius, Color color)
@@ -27,12 +22,8 @@ namespace Gwometry
         }
 
         public ColorCircle(Pixel center, int radius, Color color)
+            :base (center, radius)
         {
-            this.center = center;
-            this.radius = radius;
-            this.leftTop = new Pixel(center.X - radius, center.Y - radius);
-            width = radius * 2;
-            height = radius * 2;
             pen = new Pen(color);
         }
     }
