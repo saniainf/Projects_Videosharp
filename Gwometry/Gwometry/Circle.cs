@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Gwometry
 {
-    class Circle
+    class Circle : Shape
     {
         public Pixel center;
         public Pixel leftTop;
@@ -16,6 +17,11 @@ namespace Gwometry
         {
         }
 
+        public Circle(Pixel center, Pixel point)
+            : this(center, center.distance(point))
+        {
+        }
+
         public Circle(Pixel center, int radius)
         {
             this.center = center;
@@ -25,9 +31,9 @@ namespace Gwometry
             height = radius * 2;
         }
 
-        public Circle(Pixel center, Pixel point)
-            : this(center, center.distance(point))
+        override public void Draw()
         {
+            graph.DrawEllipse(pen, leftTop.X, leftTop.Y, width, height);
         }
     }
 }

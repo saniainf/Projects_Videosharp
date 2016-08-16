@@ -2,7 +2,7 @@
 using System;
 namespace Gwometry
 {
-    class Box
+    class Box : Shape
     {
         public Pixel leftTop;
         public Pixel rightBot;
@@ -21,6 +21,11 @@ namespace Gwometry
             this.rightBot = rightBot;
             this.width = Math.Abs(leftTop.X - rightBot.X);
             this.height = Math.Abs(rightBot.Y - leftTop.Y);
+        }
+
+        override public void Draw()
+        {
+            graph.DrawRectangle(pen, leftTop.X, leftTop.Y, width, height);
         }
     }
 }

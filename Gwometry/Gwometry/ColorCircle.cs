@@ -9,8 +9,6 @@ namespace Gwometry
 {
     class ColorCircle : Circle
     {
-        public Pen pen;
-
         public ColorCircle(int x, int y, int radius, Color color)
             : this(new Pixel(x, y), radius, color)
         {

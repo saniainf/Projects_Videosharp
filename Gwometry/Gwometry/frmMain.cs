@@ -9,21 +9,8 @@ namespace Gwometry
         Graphics graph;
         Pen pen;
 
-        Line line1;
-        Line line2;
-        Box box1;
-        Box box2;
-        Circle circle1;
-        Circle circle2;
-        Circle circle3;
-
-        ColorLine line21;
-        ColorLine line22;
-        ColorBox box21;
-        ColorBox box22;
-        ColorCircle circle21;
-        ColorCircle circle22;
-        ColorCircle circle23;
+        Sprite snowMan1;
+        Sprite snowMan2;
 
         Pixel A, B, C, D, E, F, G, H, I, J, K, L, M;
 
@@ -59,15 +46,15 @@ namespace Gwometry
             L = new Pixel(397, 575);
             M = new Pixel(450, 620);
 
-            circle1 = new Circle(A, D);
-            circle2 = new Circle(B, D);
-            circle3 = new Circle(C, E);
-
-            line1 = new Line(F, G);
-            line2 = new Line(H, I);
-
-            box1 = new Box(J, K);
-            box2 = new Box(L, M);
+            snowMan1 = new Sprite();
+            snowMan1.setGraphics(graph);
+            snowMan1.AddShape(new Circle(A, D));
+            snowMan1.AddShape(new Circle(B, D));
+            snowMan1.AddShape(new Circle(C, E));
+            snowMan1.AddShape(new Line(F, G));
+            snowMan1.AddShape(new Line(H, I));
+            snowMan1.AddShape(new Box(J, K));
+            snowMan1.AddShape(new Box(L, M));
         }
 
         private void InitSnowMan2()
@@ -87,66 +74,23 @@ namespace Gwometry
             L = new Pixel(offset + 397, 575);
             M = new Pixel(offset + 450, 620);
 
-            circle21 = new ColorCircle(A, D, Color.Red);
-            circle22 = new ColorCircle(B, D, Color.Orange);
-            circle23 = new ColorCircle(C, E, Color.Green);
+            snowMan2 = new Sprite();
+            snowMan2.setGraphics(graph);
+            snowMan2.AddShape(new ColorCircle(A, D, Color.Red));
+            snowMan2.AddShape(new ColorCircle(B, D, Color.Orange));
+            snowMan2.AddShape(new ColorCircle(C, E, Color.Green));
+            snowMan2.AddShape(new ColorLine(F, G, Color.Orange));
+            snowMan2.AddShape(new ColorLine(H, I, Color.Orange));
+            snowMan2.AddShape(new ColorBox(J, K, Color.Black));
+            snowMan2.AddShape(new ColorBox(L, M, Color.Black));
 
-            line21 = new ColorLine(F, G, Color.Orange);
-            line22 = new ColorLine(H, I, Color.Orange);
-
-            box21 = new ColorBox(J, K, Color.Black);
-            box22 = new ColorBox(L, M, Color.Black);
         }
 
         private void Draw()
         {
-            Draw(line1);
-            Draw(line2);
-            Draw(box1);
-            Draw(box2);
-            Draw(circle1);
-            Draw(circle2);
-            Draw(circle3);
-
-            Draw(line21);
-            Draw(line22);
-            Draw(box21);
-            Draw(box22);
-            Draw(circle21);
-            Draw(circle22);
-            Draw(circle23);
-
+            snowMan1.Draw();
+            snowMan2.Draw();
             pcbMain.Image = bmp;
-        }
-
-        private void Draw(Line line)
-        {
-            graph.DrawLine(pen, line.begin.X, line.begin.Y, line.ended.X, line.ended.Y);
-        }
-
-        private void Draw(ColorLine colorLine)
-        {
-            graph.DrawLine(colorLine.pen, colorLine.begin.X, colorLine.begin.Y, colorLine.ended.X, colorLine.ended.Y);
-        }
-
-        private void Draw(Box box)
-        {
-            graph.DrawRectangle(pen, box.leftTop.X, box.leftTop.Y, box.width, box.height);
-        }
-
-        private void Draw(ColorBox colorBox)
-        {
-            graph.DrawRectangle(colorBox.pen, colorBox.leftTop.X, colorBox.leftTop.Y, colorBox.width, colorBox.height);
-        }
-
-        private void Draw(Circle circle)
-        {
-            graph.DrawEllipse(pen, circle.leftTop.X, circle.leftTop.Y, circle.width, circle.height);
-        }
-
-        private void Draw(ColorCircle colorCircle)
-        {
-            graph.DrawEllipse(colorCircle.pen, colorCircle.leftTop.X, colorCircle.leftTop.Y, colorCircle.width, colorCircle.height);
         }
     }
 }
