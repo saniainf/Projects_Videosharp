@@ -14,13 +14,19 @@ namespace Gwometry
 
         Pixel A, B, C, D, E, F, G, H, I, J, K, L, M;
 
+        Circle c;
+        Box b;
+        Line l;
+
         public frmMain()
         {
             InitializeComponent();
             Init();
-            InitSnowMan1();
-            InitSnowMan2();
-            Draw();
+            //InitSnowMan1();
+            //InitSnowMan2();
+            //Draw();
+
+            InitDemo();
         }
 
         private void Init()
@@ -28,6 +34,29 @@ namespace Gwometry
             bmp = new Bitmap(pcbMain.Width, pcbMain.Height);
             graph = Graphics.FromImage(bmp);
             pen = new Pen(Color.Blue, 2f);
+        }
+
+        private void InitDemo()
+        {
+            Pixel p = new Pixel(100, 100);
+            A = new Pixel(0, 0);
+
+            c = new Circle(A, 20);
+            c.Move(p);
+            c.setGraphics(graph);
+            c.Draw();
+
+            l = new Line(0, 20, 0, 100);
+            l.setGraphics(graph);
+            l.Move(p);
+            l.Draw();
+
+            b = new Box(-20, -20, 20, -40);
+            b.setGraphics(graph);
+            b.Move(p);
+            b.Draw();
+
+            pcbMain.Image = bmp;
         }
 
         private void InitSnowMan1()
@@ -90,6 +119,17 @@ namespace Gwometry
         {
             snowMan1.Draw();
             snowMan2.Draw();
+            pcbMain.Image = bmp;
+        }
+
+        private void btnMove_Click(object sender, System.EventArgs e)
+        {
+            c.Move(new Pixel(150, 200));
+            c.Draw();
+            l.Move(new Pixel(150, 200));
+            l.Draw();
+            b.Move(new Pixel(150, 200));
+            b.Draw();
             pcbMain.Image = bmp;
         }
     }

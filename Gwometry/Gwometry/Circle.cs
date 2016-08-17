@@ -33,7 +33,7 @@ namespace Gwometry
 
         override public void Draw()
         {
-            graph.DrawEllipse(pen, leftTop.X, leftTop.Y, width, height);
+            graph.DrawEllipse(pen, leftTop.X + position.X, leftTop.Y + position.Y, width, height);
         }
     }
 }

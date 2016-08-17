@@ -19,7 +19,7 @@ namespace Gwometry
 
         override public void Draw()
         {
-            graph.DrawLine(pen, begin.X, begin.Y, ended.X, ended.Y);
+            graph.DrawLine(pen, begin.X + position.X, begin.Y + position.Y, ended.X + position.X, ended.Y + position.Y);
         }
     }
 }

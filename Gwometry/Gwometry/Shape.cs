@@ -20,5 +20,10 @@ namespace Gwometry
         }
 
         abstract public void Draw();
+
+        public void Move(Pixel p)
+        {
+            position = p;
+        }
     }
 }

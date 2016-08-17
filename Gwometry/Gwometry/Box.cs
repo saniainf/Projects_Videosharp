@@ -25,7 +25,7 @@ namespace Gwometry
 
         override public void Draw()
         {
-            graph.DrawRectangle(pen, leftTop.X, leftTop.Y, width, height);
+            graph.DrawRectangle(pen, leftTop.X + position.X, leftTop.Y + position.Y, width, height);
         }
     }
 }
