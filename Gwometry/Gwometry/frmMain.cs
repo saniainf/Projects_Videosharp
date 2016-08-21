@@ -22,11 +22,11 @@ namespace Gwometry
         {
             InitializeComponent();
             Init();
-            //InitSnowMan1();
-            //InitSnowMan2();
-            //Draw();
+            InitSnowMan1();
+            InitSnowMan2();
+            Draw();
 
-            InitDemo();
+            //InitDemo();
         }
 
         private void Init()
@@ -88,20 +88,19 @@ namespace Gwometry
 
         private void InitSnowMan2()
         {
-            int offset = 400;
-            A = new Pixel(offset + 300, 60);
-            B = new Pixel(offset + 300, 210);
-            C = new Pixel(offset + 300, 460);
-            D = new Pixel(offset + 300, 110);
-            E = new Pixel(offset + 300, 310);
-            F = new Pixel(offset + 220, 150);
-            G = new Pixel(offset + 50, 300);
-            H = new Pixel(offset + 380, 150);
-            I = new Pixel(offset + 550, 300);
-            J = new Pixel(offset + 150, 575);
-            K = new Pixel(offset + 203, 620);
-            L = new Pixel(offset + 397, 575);
-            M = new Pixel(offset + 450, 620);
+            A = new Pixel(300, 60);
+            B = new Pixel(300, 210);
+            C = new Pixel(300, 460);
+            D = new Pixel(300, 110);
+            E = new Pixel(300, 310);
+            F = new Pixel(220, 150);
+            G = new Pixel(50, 300);
+            H = new Pixel(380, 150);
+            I = new Pixel(550, 300);
+            J = new Pixel(150, 575);
+            K = new Pixel(203, 620);
+            L = new Pixel(397, 575);
+            M = new Pixel(450, 620);
 
             snowMan2 = new Sprite();
             snowMan2.setGraphics(graph);
@@ -112,6 +111,8 @@ namespace Gwometry
             snowMan2.AddShape(new ColorLine(H, I, Color.Orange));
             snowMan2.AddShape(new ColorBox(J, K, Color.Black));
             snowMan2.AddShape(new ColorBox(L, M, Color.Black));
+
+            snowMan2.Move(new Pixel(400, 0));
 
         }
 
@@ -124,13 +125,10 @@ namespace Gwometry
 
         private void btnMove_Click(object sender, System.EventArgs e)
         {
-            c.Move(new Pixel(150, 200));
-            c.Draw();
-            l.Move(new Pixel(150, 200));
-            l.Draw();
-            b.Move(new Pixel(150, 200));
-            b.Draw();
-            pcbMain.Image = bmp;
+            Pixel p = new Pixel(10, 2);
+            snowMan1.Move(p);
+            snowMan2.Move(new Pixel(410,2));
+            Draw();
         }
     }
 }

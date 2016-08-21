@@ -27,5 +27,12 @@ namespace Gwometry
             foreach (Shape ss in shapes)
                 ss.Draw();
         }
+
+        override public void Move(Pixel p)
+        {
+            base.Move(p);
+            foreach (Shape ss in shapes)
+                ss.Move(p);
+        }
     }
 }
