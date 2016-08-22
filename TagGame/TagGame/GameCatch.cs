@@ -14,6 +14,7 @@ namespace TagGame
         public GameCatch()
         {
             players = new List<IPlayer>();
+            leader = null;
         }
 
         public void AddGamer(IPlayer p)
@@ -30,7 +31,16 @@ namespace TagGame
 
         private void FindNewLeader()
         {
-            
+            if (leader == null)
+                return;
+            foreach (IPlayer p in players)
+            {
+                if (leader.Touching(p))
+                {
+                    SetNewLeader(p);
+                    return;
+                }
+            }
         }
 
         void runAll()
@@ -41,7 +51,10 @@ namespace TagGame
 
         private void SetNewLeader(IPlayer p)
         {
-
+            if (leader != null)
+                leader.NoTaggedIt();
+            leader = p;
+            leader.TaggedIt();
         }
     }
 }
