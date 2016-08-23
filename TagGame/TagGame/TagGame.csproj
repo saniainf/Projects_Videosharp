@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="GameBoard.cs" />
     <Compile Include="GameCatch.cs" />
+    <Compile Include="GameVirus.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

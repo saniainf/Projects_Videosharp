@@ -13,13 +13,13 @@ namespace TagGame
     public partial class frmMain : Form
     {
         GameBoard gBoard;
-        GameCatch gCatch;
+        GameVirus gCatch;
 
         public frmMain()
         {
             InitializeComponent();
             gBoard = new GameBoard(pcbMain);
-            gCatch = new GameCatch();
+            gCatch = new GameVirus();
             tmrMain.Enabled = true;
         }
 

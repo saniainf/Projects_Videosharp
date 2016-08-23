@@ -31,7 +31,7 @@ namespace TagGame
 
         public void Show(Circle c)
         {
-            Pen pen = new Pen(c.ColorC);
+            Pen pen = new Pen(c.ColorC, 2f);
             graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             graph.DrawEllipse(pen, c.CenterC.X - c.RadiusC, c.CenterC.Y - c.RadiusC, c.RadiusC * 2, c.RadiusC * 2);
         }
