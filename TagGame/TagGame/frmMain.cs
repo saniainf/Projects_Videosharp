@@ -12,9 +12,34 @@ namespace TagGame
 {
     public partial class frmMain : Form
     {
+        GameBoard gBoard;
+        GameCatch gCatch;
+
         public frmMain()
         {
             InitializeComponent();
+            gBoard = new GameBoard(pcbMain);
+            gCatch = new GameCatch();
+            tmrMain.Enabled = true;
+        }
+
+        private void btnAddPlayer_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                gCatch.AddGamer(GameBoard.NewCircle());
+            }
+        }
+
+        private void tmrMain_Tick(object sender, EventArgs e)
+        {
+            gCatch.Step();
+            gBoard.Clear();
+            foreach (Circle c in gCatch.players)
+            {
+                gBoard.Show(c);
+            }
+            gBoard.Refresh();
         }
     }
 }

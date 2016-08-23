@@ -32,6 +32,7 @@ namespace TagGame
         public void Show(Circle c)
         {
             Pen pen = new Pen(c.ColorC);
+            graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             graph.DrawEllipse(pen, c.CenterC.X - c.RadiusC, c.CenterC.Y - c.RadiusC, c.RadiusC * 2, c.RadiusC * 2);
         }
 
@@ -45,7 +46,9 @@ namespace TagGame
             int r = rnd.Next(Range.Width / 50, Range.Height / 20);
             int x = rnd.Next(r, Range.Width - r);
             int y = rnd.Next(r, Range.Height - r);
-            return new Circle(x, y, r);
+            int sx = rnd.Next(-5, 6);
+            int sy = rnd.Next(-5, 6);
+            return new Circle(x, y, r, sx, sy);
         }
     }
 }

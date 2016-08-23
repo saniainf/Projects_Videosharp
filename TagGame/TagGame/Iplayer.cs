@@ -5,6 +5,6 @@
         void Run();
         void TaggedIt();
         void NoTaggedIt();
-        bool Touching(object obj);
+        bool Touching(IPlayer player);
     }
 }
