@@ -29,15 +29,19 @@ namespace TagGame
             {
                 gCatch.AddGamer(GameBoard.NewCircle());
             }
+            for (int i = 0; i < 5; i++)
+            {
+                gCatch.AddGamer(GameBoard.NewBox());
+            }
         }
 
         private void tmrMain_Tick(object sender, EventArgs e)
         {
             gCatch.Step();
             gBoard.Clear();
-            foreach (Circle c in gCatch.players)
+            foreach (IPlayer p in gCatch.players)
             {
-                gBoard.Show(c);
+                gBoard.Show(p);
             }
             gBoard.Refresh();
         }

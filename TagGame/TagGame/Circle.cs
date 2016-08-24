@@ -47,19 +47,7 @@ namespace TagGame
 
         public bool Touching(IPlayer player)
         {
-            if (player is Circle)
-                return intersect((Circle)player);
-            return false;
-        }
-
-        private bool intersect(Circle c)
-        {
-            return (distance(c.CenterC) < RadiusC + c.RadiusC);
-        }
-
-        private int distance(Point p)
-        {
-            return Convert.ToInt16(Math.Sqrt((CenterC.X - p.X) * (CenterC.X - p.X) + (CenterC.Y - p.Y) * (CenterC.Y - p.Y)));
+            return GameBoard.Intersect(this, player);
         }
     }
 }

@@ -42,7 +42,7 @@
             this.pcbMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbMain.Location = new System.Drawing.Point(0, 0);
             this.pcbMain.Name = "pcbMain";
-            this.pcbMain.Size = new System.Drawing.Size(546, 537);
+            this.pcbMain.Size = new System.Drawing.Size(550, 537);
             this.pcbMain.TabIndex = 0;
             this.pcbMain.TabStop = false;
             // 
@@ -58,7 +58,7 @@
             // 
             // tmrMain
             // 
-            this.tmrMain.Interval = 1;
+            this.tmrMain.Interval = 20;
             this.tmrMain.Tick += new System.EventHandler(this.tmrMain_Tick);
             // 
             // frmMain
