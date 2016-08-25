@@ -13,22 +13,22 @@ namespace TagGame
     public partial class frmMain : Form
     {
         GameBoard gBoard;
-        GameVirus gCatch;
+        GameBoxVsCircle gCatch;
 
         public frmMain()
         {
             InitializeComponent();
             gBoard = new GameBoard(pcbMain);
-            gCatch = new GameVirus();
+            gCatch = new GameBoxVsCircle();
             tmrMain.Enabled = true;
         }
 
         private void btnAddPlayer_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 5; i++)
-            {
-                gCatch.AddGamer(GameBoard.NewCircle());
-            }
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    gCatch.AddGamer(GameBoard.NewCircle());
+            //}
             for (int i = 0; i < 5; i++)
             {
                 gCatch.AddGamer(GameBoard.NewBox());
@@ -39,11 +39,19 @@ namespace TagGame
         {
             gCatch.Step();
             gBoard.Clear();
-            foreach (IPlayer p in gCatch.players)
+            foreach (IPlayer p in gCatch.Players)
             {
                 gBoard.Show(p);
             }
             gBoard.Refresh();
+        }
+
+        private void btnAddCircle_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                gCatch.AddGamer(GameBoard.NewCircle());
+            }
         }
     }
 }

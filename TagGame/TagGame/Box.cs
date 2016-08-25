@@ -11,7 +11,7 @@ namespace TagGame
     {
         public Rectangle RectB { get; private set; }
         public Color ColorB { get; private set; }
-        int sx, sy;
+        public int SX, SY;
 
         public Box(int x, int y, int width, int height)
             : this(x, y, width, height, 0, 0)
@@ -22,20 +22,20 @@ namespace TagGame
         {
             RectB = new Rectangle(x, y, width, height);
             ColorB = Color.Green;
-            this.sx = sx;
-            this.sy = sy;
+            this.SX = sx;
+            this.SY = sy;
         }
 
 
         public void Run()
         {
-            int x = RectB.X + sx;
-            int y = RectB.Y + sy;
+            int x = RectB.X + SX;
+            int y = RectB.Y + SY;
             if (x < 0 || x > GameBoard.Range.Width - RectB.Width)
-                sx = -sx;
+                SX = -SX;
             if (y < 0 || y > GameBoard.Range.Height - RectB.Height)
-                sy = -sy;
-            RectB = new Rectangle(RectB.X + sx, RectB.Y + sy, RectB.Width, RectB.Height);
+                SY = -SY;
+            RectB = new Rectangle(RectB.X + SX, RectB.Y + SY, RectB.Width, RectB.Height);
         }
 
         public void TaggedIt()
@@ -45,7 +45,7 @@ namespace TagGame
 
         public void NoTaggedIt()
         {
-            ColorB = Color.White;
+            ColorB = Color.Green;
         }
 
         public bool Touching(IPlayer player)

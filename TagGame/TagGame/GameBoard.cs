@@ -69,7 +69,7 @@ namespace TagGame
         static public Box NewBox()
         {
             int width = rnd.Next(Range.Width / 30, Range.Width / 10);
-            int height = rnd.Next(Range.Height / 30, Range.Height / 10);
+            int height = width;
             int x = rnd.Next(0, Range.Width - width);
             int y = rnd.Next(0, Range.Height - height);
             int sx = rnd.Next(-5, 6);
@@ -104,17 +104,23 @@ namespace TagGame
 
         static private bool intersect(Circle c, Box b)
         {
-            int x = c.CenterC.X - c.RadiusC;
-            int y = c.CenterC.Y - c.RadiusC;
-            int wh = c.RadiusC * 2;
-            Rectangle rect = new Rectangle(x, y, wh, wh);
-            if (!(rect.IntersectsWith(b.RectB)))
+            Point circleDistance = new Point();
+            circleDistance.X = Math.Abs(c.CenterC.X - (b.RectB.X + b.RectB.Width / 2));
+            circleDistance.Y = Math.Abs(c.CenterC.Y - (b.RectB.Y + b.RectB.Height / 2));
+
+            if (circleDistance.X > (b.RectB.Width / 2 + c.RadiusC))
                 return false;
-            return
-                c.RadiusC >= distance(c.CenterC, new Point(b.RectB.Left, b.RectB.Top)) ||
-                c.RadiusC >= distance(c.CenterC, new Point(b.RectB.Left, b.RectB.Bottom)) ||
-                c.RadiusC >= distance(c.CenterC, new Point(b.RectB.Right, b.RectB.Top)) ||
-                c.RadiusC >= distance(c.CenterC, new Point(b.RectB.Right, b.RectB.Bottom));
+            if (circleDistance.Y > (b.RectB.Height / 2 + c.RadiusC))
+                return false;
+
+            if (circleDistance.X <= (b.RectB.Width / 2))
+                return true;
+            if (circleDistance.Y <= (b.RectB.Height / 2))
+                return true;
+
+            float cornerDistance_sq = (circleDistance.X - b.RectB.Width / 2) * (circleDistance.X - b.RectB.Width / 2) + (circleDistance.Y - b.RectB.Height / 2) * (circleDistance.Y - b.RectB.Height / 2);
+
+            return (cornerDistance_sq <= (c.RadiusC * c.RadiusC));
         }
 
         static private bool intersect(Circle c1, Circle c2)

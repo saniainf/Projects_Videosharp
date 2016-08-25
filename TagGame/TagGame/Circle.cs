@@ -8,7 +8,7 @@ namespace TagGame
         public Point CenterC { get; private set; }
         public int RadiusC { get; private set; }
         public Color ColorC { get; private set; }
-        int sx, sy;
+        public int SX, SY;
 
         public Circle(int x, int y, int r)
             : this(x, y, r, 0, 0)
@@ -19,20 +19,20 @@ namespace TagGame
         {
             CenterC = new Point(x, y);
             RadiusC = r;
-            ColorC = Color.White;
-            this.sx = sx;
-            this.sy = sy;
+            ColorC = Color.Blue;
+            this.SX = sx;
+            this.SY = sy;
         }
 
         public void Run()
         {
-            int x = CenterC.X + sx;
-            int y = CenterC.Y + sy;
+            int x = CenterC.X + SX;
+            int y = CenterC.Y + SY;
             if (x < RadiusC || x > GameBoard.Range.Width - RadiusC)
-                sx = -sx;
+                SX = -SX;
             if (y < RadiusC || y > GameBoard.Range.Height - RadiusC)
-                sy = -sy;
-            CenterC = new Point(CenterC.X + sx, CenterC.Y + sy);
+                SY = -SY;
+            CenterC = new Point(CenterC.X + SX, CenterC.Y + SY);
         }
 
         public void TaggedIt()
@@ -42,7 +42,7 @@ namespace TagGame
 
         public void NoTaggedIt()
         {
-            ColorC = Color.White;
+            ColorC = Color.Blue;
         }
 
         public bool Touching(IPlayer player)

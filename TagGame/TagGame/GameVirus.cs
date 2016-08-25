@@ -20,16 +20,16 @@ namespace TagGame
         public void AddGamer(IPlayer p)
         {
             players.Add(p);
-            SetNewVirus(p);
+            setNewVirus(p);
         }
 
         public void Step()
         {
-            RunAll();
-            FindNewVirus();
+            runAll();
+            findNewVirus();
         }
 
-        private void RunAll()
+        private void runAll()
         {
             foreach (IPlayer p in players)
             {
@@ -38,7 +38,7 @@ namespace TagGame
             }
         }
 
-        public void SetNewVirus(IPlayer player)
+        private void setNewVirus(IPlayer player)
         {
             virused = new List<IPlayer>();
             foreach (IPlayer p in players)
@@ -49,14 +49,14 @@ namespace TagGame
             virused.Add(player);
         }
 
-        private void FindNewVirus()
+        private void findNewVirus()
         {
             foreach (IPlayer p in players)
                 if (!virused.Contains(p))
                 {
                     if (virused.Count == players.Count - 1)
                     {
-                        SetNewVirus(p);
+                        setNewVirus(p);
                         break;
                     }
                     foreach (IPlayer v in virused)

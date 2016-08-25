@@ -22,16 +22,16 @@ namespace TagGame
         public void AddGamer(IPlayer p)
         {
             players.Add(p);
-            SetNewLeader(p);
+            setNewLeader(p);
         }
 
         public void Step()
         {
             runAll();
-            FindNewLeader();
+            findNewLeader();
         }
 
-        private void FindNewLeader()
+        private void findNewLeader()
         {
             if (leader == null)
                 return;
@@ -40,19 +40,19 @@ namespace TagGame
                 if (!leader.Equals(p) && !prevPlayer.Equals(p))
                     if (leader.Touching(p))
                     {
-                        SetNewLeader(p);
+                        setNewLeader(p);
                         return;
                     }
             }
         }
 
-        void runAll()
+        private void runAll()
         {
             foreach (IPlayer p in players)
                 p.Run();
         }
 
-        private void SetNewLeader(IPlayer p)
+        private void setNewLeader(IPlayer p)
         {
             if (leader != null)
             {
